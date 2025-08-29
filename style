@@ -1,1 +1,10 @@
+div {
+    display: flex; 
+    max-width: 90%;
+    min-width: 50%;
+    justify-content: center 
+ }
 
+body {
+
+ }
