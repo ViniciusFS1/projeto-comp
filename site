@@ -1,27 +1,39 @@
 <html>
 
     <head>
+
         <link rel="stylesheet" type="text/css" href="style.css">
-        <div>
-           <h1>dashboard</h1>
-        </div>
 
     </head>
-
-
     <body>
 
-    <h2>Reclamaçoes frequentes</h2>
-    <h2>Sugestoes de melhorias</h2>
-    <h2>Informaçoes</h2>
+        <div class="container">
+            <header class="header">
+                <h2>Começo</h2>
+            </header>
+            <aside class="aside">
+                <h1>Dashboard</h1>  <br />
+                <h4>link</h4>
+                <h4>link</h4>
+                <h4>link</h4>
+                <h4>link</h4>
+            </aside>
+
+            <main class="main"> 
+                <h3>Reclamaçoes</h3>
+                <h3>Reclamaçoes mais frequentes</h3>
+                <h3>Sites com mais reclamaçoes</h3>
+
+            
+
+            </main>
+            <footer class="footer">Rodapé</footer>
+        </div>
+
 
 
 
     </body>
-
-
-
-
 
 
 </html>
