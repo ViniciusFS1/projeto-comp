@@ -1,0 +1,5 @@
+# Search patterns to be used by crawler
+https://twitter.com/search?q={target}&f=live&page={page}
+https://www.instagram.com/explore/tags/{target}/?page={page}
+https://www.reclameaqui.com.br/empresa/{target}/reclamacoes/?pagina={page}
+https://github.com/search?q={target}&type=repositories&p={page}
