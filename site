@@ -20,13 +20,24 @@
             </aside>
 
             <main class="main"> 
-                <h3>Reclamaçoes</h3>
-                <h3>Reclamaçoes mais frequentes</h3>
-                <h3>Sites com mais reclamaçoes</h3>
 
-            
+                <section>
+                     <h3>Reclamaçoes</h3>
+                </section>
+
+
+                <section>
+                     <h3>Reclamaçoes mais frequentes</h3>
+                </section>
+
+
+                <section>
+                     <h3>Sites com mais reclamaçoes</h3>
+                </section>
+
 
             </main>
+
             <footer class="footer">Rodapé</footer>
         </div>
 
