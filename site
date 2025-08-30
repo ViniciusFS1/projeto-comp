@@ -5,8 +5,6 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
-
-
     <body>
 
         <div class="container">
@@ -15,17 +13,17 @@
             </header>
             <aside class="aside">
                 <h1>Dashboard</h1>  <br />
-                <h3>links</h3>
-                <h3>links</h3>
-                <h3>links</h3>
-                <h3>links</h3>
+                <h4>link</h4>
+                <h4>link</h4>
+                <h4>link</h4>
+                <h4>link</h4>
             </aside>
 
             <main class="main"> 
-               
-                <h2>Reclamaçoes mais frequentes</h2>
-                <h2>Sites com mais reclamaçoes</h2>
-                <h2>Reclamaçoes</h2>
+                <h3>Reclamaçoes</h3>
+                <h3>Reclamaçoes mais frequentes</h3>
+                <h3>Sites com mais reclamaçoes</h3>
+
             
 
             </main>
