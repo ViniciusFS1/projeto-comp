@@ -8,4 +8,4 @@ if __name__ == "__main__":
     # path to save the Excel file
     excel_path = "santander_complaints.xlsx"
     target_company = "santander"
-    collect_complaints(target_company, excel_path, chromedriver_path)
+    collect_complaints(target_company, excel_path, chromedriver_path,pages=2)
