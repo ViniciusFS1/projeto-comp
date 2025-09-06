@@ -12,7 +12,7 @@ import time
 
 def collect_complaints(company_name, excel_path, chromedriver_path):
     """
-    Collects complaints titles and upvotes from Reclame Aqui and saves them to Excel.
+    Collects complaints and upvotes from Reclame Aqui and saves them to Excel.
 
     Args:
         company_name (str): Company name in the Reclame Aqui URL.
@@ -27,7 +27,6 @@ def collect_complaints(company_name, excel_path, chromedriver_path):
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--disable-infobars")
     chrome_options.add_argument("--disable-extensions")
-    chrome_options.add_argument("--log-level=3")  # Suppress logs
 
     service = Service(chromedriver_path)
     driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -47,17 +46,19 @@ def collect_complaints(company_name, excel_path, chromedriver_path):
     except TimeoutException:
         print("No cookies pop-up found.")
 
-    # Wait for complaints to load
+    # Wait for complaints container to load
     try:
         WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.XPATH, "//h4[@data-testid='compain-title-link']"))
+            EC.presence_of_element_located((By.XPATH, '//div[contains(@class,"sc-1b5q6xg-1")]'))
         )
     except TimeoutException:
         print("No complaints found.")
         driver.quit()
         return
 
-    # Scroll to load more complaints if necessary
+    # -----------------------------
+    # Scroll down to load more complaints (if necessary)
+    # -----------------------------
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -68,20 +69,23 @@ def collect_complaints(company_name, excel_path, chromedriver_path):
         last_height = new_height
 
     # -----------------------------
-    # Collect complaints data
+    # Collect complaints
     # -----------------------------
-    titles = driver.find_elements(By.XPATH, "//h4[@data-testid='compain-title-link']")
+    complaints_elements = driver.find_elements(By.XPATH, '//div[contains(@class,"sc-1b5q6xg-1")]')
     complaints_data = []
 
-    for title in titles:
-        complaint_text = title.text
+    for elem in complaints_elements:
         try:
-            # Adjust XPath for upvotes if needed
-            upvotes = title.find_element(By.XPATH, ".//following::span[contains(@class,'upvotes')]").text
+            text = elem.find_element(By.XPATH, './/p').text
+        except:
+            text = None
+        try:
+            upvotes = elem.find_element(By.XPATH, './/span[contains(@class,"upvotes")]').text
         except:
             upvotes = None
+
         complaints_data.append({
-            "complaint_title": complaint_text,
+            "complaint_text": text,
             "upvotes": upvotes,
             "date_collected": datetime.datetime.now().date(),
             "time_collected": datetime.datetime.now().time()
@@ -100,5 +104,12 @@ def collect_complaints(company_name, excel_path, chromedriver_path):
     else:
         df = df_new
 
-    df.to_csv(excel_path, index=False)
+    df.to_excel(excel_path, index=False)
     print(f"{len(df_new)} complaints saved to {excel_path}")
+
+# -----------------------------
+# Example usage
+# -----------------------------
+chromedriver_path = "C:/Users/Lior Lerner/Downloads/chromedriver-win64/chromedriver.exe"
+excel_path = "mercado_livre_complaints.xlsx"
+collect_complaints("mercado-livre", excel_path, chromedriver_path)

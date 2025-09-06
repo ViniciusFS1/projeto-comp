@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "aside  header"
+    "aside   main"
+    "aside   main";
+  height: 100vmin;
+}
+.header {
+  grid-area: header;
+  background-color: gray;
+}
+.aside {
+  grid-area: aside;
+  background-color: #ddd;
+}
+.main {
+  display: flex;
+  grid-area: main;
+  background-color: #eee;
+
+
+}
+
+section {
+  background-color: blue;
+
+}
+
+.section2{
+  background-color: red;
+}

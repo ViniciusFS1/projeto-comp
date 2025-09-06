@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "aside  header"
+    "aside   main"
+    "aside  footer";
+  flex-wrap: wrap
+}
+.header {
+  grid-area: header;
+  background-color: gray;
+}
+.aside {
+  grid-area: aside;
+  background-color: #ddd;
+}
+.main {
+  grid-area: main;
+  background-color: #eee;
+}
+.footer {
+  grid-area: footer;
+  background-color: #ccc;
+  
+}

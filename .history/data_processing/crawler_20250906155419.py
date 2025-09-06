@@ -100,5 +100,5 @@ def collect_complaints(company_name, excel_path, chromedriver_path):
     else:
         df = df_new
 
-    df.to_csv(excel_path, index=False)
+    df.to_excel(excel_path, index=False)
     print(f"{len(df_new)} complaints saved to {excel_path}")
