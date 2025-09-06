@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "aside main";
+  height: 100vh;
+  gap: 2px;
+}
+
+header {
+  grid-area: header;
+  background-color:#333;
+  padding-left: 10px;
+  padding-top: 10px;
+
+}
+
+aside {
+  grid-area: aside;
+  background-color: #ddde;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "section section";
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;   
+
+}
+
+section {
+  background-color: #ddde;
+  min-height: 150px; 
+
+}
+
+

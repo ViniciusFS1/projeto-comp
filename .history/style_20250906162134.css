@@ -1,0 +1,47 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "aside  header"
+    "aside   main"
+    "aside   main";
+  height: 100vmin;
+}
+header {
+  grid-area: header;
+  background-color: gray;
+}
+aside {
+  grid-area: aside;
+  background-color: #ddd;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: repeat(2, "section section");
+}
+
+section {
+  background-color: blue;
+
+}
+
+sectiont {
+  background-color: green;
+}
+
+
+sectiontt {
+  background-color: green;
+
+}
+
+sectionttt {
+  background-color: blue;
+
+}
+
+
+
