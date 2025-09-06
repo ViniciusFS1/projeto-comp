@@ -17,10 +17,15 @@
   background-color: #ddd;
 }
 .main {
+  display: flex;
+  flex-direction:row
   grid-area: main;
   background-color: #eee;
+
+
 }
-.footer {
-  grid-area: footer;
-  background-color: #ccc;
+
+section {
+  background-color: blue;
+
 }
