@@ -16,6 +16,7 @@ body {
     background-color: var(--thirtiary-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 20px;
     display: grid;
     grid-template-areas:
         "header header"
@@ -26,11 +27,13 @@ header{
     grid-area: header;
     background: var(--primary-color);
     color: var(--thirtiary-color);
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    padding-left: 20px;
+
 
 }
 

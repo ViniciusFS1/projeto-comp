@@ -1,9 +1,5 @@
-:root {
-    --primary-color: #333;
-    --secondary-color: #ddde;
-    --thirtiary-color: #fff;
-    --hover-color: #555;
-}
+:root
+
 
 *{
     margin: 0;
@@ -13,30 +9,34 @@
 }
 
 body {
-    background-color: var(--thirtiary-color);
-    color: var(--text-color);
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
+    padding: 20px;
     display: grid;
     grid-template-areas:
         "header header"
         "main aside";
 }
 
+
 header{
     grid-area: header;
-    background: var(--primary-color);
-    color: var(--thirtiary-color);
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    padding-left: 20px;
     gap: 10px;
 
 }
 
 main {
     grid-area: main;
-    background: var(--secondary-color);
+    background: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,7 +45,7 @@ main {
 }
 aside{
     grid-area: aside;
-    background: var(--secondary-color);
+    background: #e2e2e2;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);

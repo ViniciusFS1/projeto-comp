@@ -6,11 +6,14 @@
 }
 
 :root {
-    --primary-color: #333;
-    --secondary-color: #ddde;
-    --thirtiary-color: #fff;
-    --hover-color: #555;
+    --primary-color: #35424a;
+    --secondary-color: #e2e2e2;
+    --text-color: #333;
+    --background-color: #f4f4f4;
 }
+
+
+
 
 .layout {
   display: grid;
@@ -22,12 +25,12 @@
     "aside main";
   height: 100vh;
   gap: 2px;
-  background-color:var(--primary-color);
+  background-color: var();
 }
 
 header {
   grid-area: header;
-  background-color:var(--primary-color);
+  background-color:#333;
   padding-left: 10px;
   padding-top: 10px;
   justify-content: center;
@@ -39,7 +42,7 @@ header {
 
 aside {
   grid-area: aside;
-  background-color:var(--primary-color);
+  background-color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +65,7 @@ main {
 }
 
 section {
-  background-color: var(--secondary-color);
+  background-color: #ddde;
   min-height: 150px; 
   border-radius: 20px;
   justify-content: center;
@@ -80,11 +83,11 @@ section {
 }
 
 .complaint-card {
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 8px;
     width: 100%;                 
-    background-color: var(--thirtiary-color);
+    background-color: #fff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 
     display: flex;
@@ -98,7 +101,7 @@ section {
 .read-more-btn {
     margin-top: 0.5rem;
     padding: 0.3rem 0.6rem;
-    background-color: var(--primary-color);
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 4px;
@@ -108,7 +111,7 @@ section {
 }
 
 .read-more-btn:hover {
-    background-color: var(--hover-color);
+    background-color: #555;
 }
 
 .nav-cards {
@@ -123,7 +126,7 @@ section {
 }
 
 .nav-card {
-    background-color:var(--hover-color); 
+    background-color: #444;  
     padding: 0.8rem 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -138,6 +141,6 @@ section {
 }
 
 .nav-card a:hover {
-    background-color:var(--hover-color); 
+    background-color: #555;  
     border-radius: 8px;
 }

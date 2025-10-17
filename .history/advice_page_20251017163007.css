@@ -13,9 +13,10 @@
 }
 
 body {
-    background-color: var(--thirtiary-color);
+    background-color: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 20px;
     display: grid;
     grid-template-areas:
         "header header"
@@ -24,12 +25,14 @@ body {
 
 header{
     grid-area: header;
-    background: var(--primary-color);
-    color: var(--thirtiary-color);
+    background: var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    padding-left: 20px;
     gap: 10px;
 
 }
