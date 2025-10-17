@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
 
 }
 
@@ -12,12 +11,11 @@
   grid-template-columns: 200px 1fr;
   grid-template-rows: 60px 1fr 60px;
   grid-template-areas:
-    "empty header"
+    "aside header"
     "aside main"
     "aside main";
   height: 100vh;
   gap: 2px;
-  background-color: #333;
 }
 
 header {
@@ -34,12 +32,11 @@ header {
 
 aside {
   grid-area: aside;
-  background-color: #333;
+  background-color: #ddde;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
 }
@@ -61,7 +58,7 @@ section {
   min-height: 150px; 
   border-radius: 20px;
   justify-content: center;
-  padding: 1rem; 
+  
 }
 
 
@@ -84,10 +81,10 @@ section {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;      
-    align-items: center;         
+    justify-content: center;      /* centraliza verticalmente */
+    align-items: center;          /* centraliza horizontalmente */
     gap: 0.5rem;
-    text-align: center;          
+    text-align: center;           /* centraliza texto dentro do card */
 }
 
 .read-more-btn {
@@ -104,35 +101,4 @@ section {
 
 .read-more-btn:hover {
     background-color: #555;
-}
-
-.nav-cards {
-    list-style: none;      
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;            
-    width: 100%;
-
-}
-
-.nav-card {
-    background-color: #444;  
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.nav-card a {
-    text-decoration: none;   
-    color: white;            
-    font-weight: 500;
-    display: block;           
-}
-
-.nav-card a:hover {
-    background-color: #555;  
-    border-radius: 8px;
 }

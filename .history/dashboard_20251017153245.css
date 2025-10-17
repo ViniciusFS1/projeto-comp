@@ -12,7 +12,7 @@
   grid-template-columns: 200px 1fr;
   grid-template-rows: 60px 1fr 60px;
   grid-template-areas:
-    "empty header"
+    "aside header"
     "aside main"
     "aside main";
   height: 100vh;
@@ -34,11 +34,10 @@ header {
 
 aside {
   grid-area: aside;
-  background-color: #333;
+  background-color: #1f1f1f;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -104,35 +103,4 @@ section {
 
 .read-more-btn:hover {
     background-color: #555;
-}
-
-.nav-cards {
-    list-style: none;      
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;            
-    width: 100%;
-
-}
-
-.nav-card {
-    background-color: #444;  
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.nav-card a {
-    text-decoration: none;   
-    color: white;            
-    font-weight: 500;
-    display: block;           
-}
-
-.nav-card a:hover {
-    background-color: #555;  
-    border-radius: 8px;
 }

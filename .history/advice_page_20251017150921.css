@@ -16,10 +16,9 @@ body {
         "main aside";
 }
 
-
 header{
     grid-area: header;
-    background: #35424a;
+    background: #red;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -30,7 +29,6 @@ header{
     gap: 10px;
 
 }
-
 main {
     grid-area: main;
     background: #ffffff;

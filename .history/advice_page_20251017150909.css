@@ -7,7 +7,7 @@
 
 body {
     background-color: #f4f4f4;
-    color: #333;
+    color: #f03131;
     line-height: 1.6;
     padding: 20px;
     display: grid;
@@ -15,7 +15,6 @@ body {
         "header header"
         "main aside";
 }
-
 
 header{
     grid-area: header;
@@ -30,7 +29,6 @@ header{
     gap: 10px;
 
 }
-
 main {
     grid-area: main;
     background: #ffffff;

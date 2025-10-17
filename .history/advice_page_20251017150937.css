@@ -30,7 +30,6 @@ header{
     gap: 10px;
 
 }
-
 main {
     grid-area: main;
     background: #ffffff;

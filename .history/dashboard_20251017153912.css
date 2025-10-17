@@ -12,7 +12,7 @@
   grid-template-columns: 200px 1fr;
   grid-template-rows: 60px 1fr 60px;
   grid-template-areas:
-    "empty header"
+    "aside header"
     "aside main"
     "aside main";
   height: 100vh;
@@ -38,7 +38,7 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
@@ -107,14 +107,13 @@ section {
 }
 
 .nav-cards {
-    list-style: none;      
+    list-style: none;        /* remove os bullets */
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;            
     width: 100%;
-
 }
 
 .nav-card {

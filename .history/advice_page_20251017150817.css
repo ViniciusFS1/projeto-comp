@@ -16,7 +16,9 @@ body {
         "main aside";
 }
 
-
+h2`{
+    background-color: #ddde;
+}
 header{
     grid-area: header;
     background: #35424a;
@@ -30,7 +32,6 @@ header{
     gap: 10px;
 
 }
-
 main {
     grid-area: main;
     background: #ffffff;
